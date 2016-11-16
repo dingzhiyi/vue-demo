@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>VueJS</title>
+  <link rel="stylesheet" href="">
+  <script src="javascript/vue.js"></script>
+</head>
+<body>
+  <div id="exercise">
+    <p>VueJS is a pretty cool - {{ YOUR_NAME }}({{ YOUR_AGE }})</p>
+    <p>{{ YOUR_AGE * 3 }}</p>
+    <p>{{ randomNumber() }}</p>
+    <img v-bind:src="image" style="width:100px;height:100px">
+    <br>
+    <input type="text" v-bind:value="YOUR_NAME">
+  </div>
+  <script>
+    new Vue({
+      el:"#exercise",
+      data:{
+        YOUR_NAME:"Ding",
+        YOUR_AGE:23,
+        image:"https://camo.githubusercontent.com/224f79940611c6c12fb649128eca1cae31086d23/68747470733a2f2f7261776769742e636f6d2f7675656a732f617765736f6d652d7675652f6d61737465722f6c6f676f2e706e67"
+      },
+      methods:{
+        randomNumber:function(){
+          return Math.random();
+        }
+      }
+    });
+  </script>
+
+  </body>
+  </html>
